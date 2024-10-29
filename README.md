@@ -1,1 +1,1 @@
-![weather preview](./prewiew.png) 
+![weather preview](./preview.png) 
