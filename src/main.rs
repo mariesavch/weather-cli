@@ -1,4 +1,4 @@
-use chrono::{Local, NaiveDateTime, TimeZone};
+use chrono::{Local, TimeZone};
 use clap::Parser;
 use colored::*;
 use reqwest;
@@ -63,7 +63,6 @@ async fn get_forecast(location: String) -> reqwest::Result<ForecastData> {
 async fn print_weather(location: &str) {
     match get_weather(location.to_string()).await {
         Ok(weather_data) => {
-            // Display current weather information
             println!(
                 "{}: {}°C (feels like {}°C) - {}",
                 "status".bold().blue(),
